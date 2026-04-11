@@ -1,7 +1,7 @@
 {
   "name": "gout-du-pays",
   "version": "1.0.0",
-  "description": "Goût du Pays — Restaurant Gastronomique Béninois",
+  "description": "Goût du Pays — Site vitrine pour restaurant gastronomique béninois",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"

@@ -1,0 +1,93 @@
+/* ═══════════════════════════════════════════════════════
+   components.css — Boutons, cartes, toggle langue
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Boutons ──────────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  padding: 16px 48px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  transition: all .4s;
+}
+.btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+.btn-filled {
+  background: var(--gold);
+  color: var(--bg);
+}
+.btn-filled:hover {
+  background: var(--gold-light);
+  color: var(--bg);
+}
+
+/* ── Toggle Langue ────────────────────────────────────── */
+.lang-toggle {
+  display: flex; gap: 4px;
+  background: rgba(255,255,255,.06);
+  border-radius: 100px;
+  padding: 3px;
+}
+.lang-toggle button {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--sans);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  transition: all .3s;
+}
+.lang-toggle button.active {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+/* ── Cartes Plats ─────────────────────────────────────── */
+.dish-card {
+  position: relative;
+  background: var(--bg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .5s ease, box-shadow .5s ease;
+}
+.dish-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+.dish-card-img {
+  aspect-ratio: 4/5; overflow: hidden;
+}
+.dish-card-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .8s ease;
+}
+.dish-card:hover .dish-card-img img { transform: scale(1.05); }
+
+.dish-card-body { padding: 1.75rem; }
+.dish-card-body .dish-number {
+  font-family: var(--serif); font-size: 3.5rem;
+  color: rgba(201,168,76,.12); font-weight: 700;
+  line-height: 1; margin-bottom: -1rem; position: relative;
+}
+.dish-card-body h3 {
+  font-family: var(--serif); font-size: 1.5rem;
+  font-weight: 700; margin-bottom: .5rem;
+}
+.dish-card-body .dish-desc {
+  font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem;
+}
+.dish-card-body .dish-price {
+  font-family: var(--sans); font-size: .85rem;
+  letter-spacing: .1em; color: var(--gold); font-weight: 700;
+}

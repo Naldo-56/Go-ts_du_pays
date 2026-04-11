@@ -1,15 +1,16 @@
 const express = require('express');
 const path = require('path');
+const config = require('./config');
+const routes = require('./routes');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname)));
+// Fichiers statiques (CSS, JS, images) servis depuis /public
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
+// Routes de l'application
+app.use('/', routes);
 
-app.listen(PORT, () => {
-  console.log(`Goût du Pays running at http://localhost:${PORT}`);
+app.listen(config.port, () => {
+  console.log(`${config.appName} running at http://localhost:${config.port}`);
 });

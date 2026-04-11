@@ -4,19 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Carte — Goût du Pays</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/chatbot.css">
 </head>
 <body>
 
 <!-- ═══ NAV ═══ -->
 <nav class="nav scrolled">
   <div class="container">
-    <a href="index.html" class="nav-logo">Goût du <span>Pays</span></a>
+    <a href="/" class="nav-logo">Goût du <span>Pays</span></a>
     <ul class="nav-links">
-      <li><a href="index.html" data-i18n="navHome">Accueil</a></li>
-      <li><a href="index.html#story" data-i18n="navStory">Notre Histoire</a></li>
-      <li><a href="menu.html" data-i18n="navMenu">La Carte</a></li>
-      <li><a href="index.html#reserve" data-i18n="navReserve">Réserver</a></li>
+      <li><a href="/" data-i18n="navHome">Accueil</a></li>
+      <li><a href="/#story" data-i18n="navStory">Notre Histoire</a></li>
+      <li><a href="/menu" data-i18n="navMenu">La Carte</a></li>
+      <li><a href="/#reserve" data-i18n="navReserve">Réserver</a></li>
       <li>
         <div class="lang-toggle">
           <button data-lang="fr" class="active">FR</button>
@@ -44,7 +47,7 @@
 <section class="menu-section section-pad">
   <div class="container">
 
-    <p style="margin-bottom:2.5rem;"><a href="index.html" class="text-gold" data-i18n="menuBack">← Retour à l'accueil</a></p>
+    <p style="margin-bottom:2.5rem;"><a href="/" class="text-gold" data-i18n="menuBack">← Retour à l'accueil</a></p>
 
     <!-- STARTERS -->
     <div class="menu-category fade-up">
@@ -211,10 +214,10 @@
       <div>
         <h4 data-i18n="footerNav">Navigation</h4>
         <ul>
-          <li><a href="index.html" data-i18n="navHome">Accueil</a></li>
-          <li><a href="index.html#story" data-i18n="navStory">Notre Histoire</a></li>
-          <li><a href="menu.html" data-i18n="navMenu">La Carte</a></li>
-          <li><a href="index.html#reserve" data-i18n="navReserve">Réserver</a></li>
+          <li><a href="/" data-i18n="navHome">Accueil</a></li>
+          <li><a href="/#story" data-i18n="navStory">Notre Histoire</a></li>
+          <li><a href="/menu" data-i18n="navMenu">La Carte</a></li>
+          <li><a href="/#reserve" data-i18n="navReserve">Réserver</a></li>
         </ul>
       </div>
       <div>
@@ -245,19 +248,16 @@
 <button class="chatbot-fab" onclick="toggleChat()" aria-label="Chat">
   <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
 </button>
-
 <div class="chatbot-window">
   <div class="chatbot-header">
     <div class="dot"></div>
     <h4 data-i18n="chatTitle">Concierge</h4>
-    <button onclick="closeChat()">✕</button>
+    <button onclick="closeChat()">&#x2715;</button>
   </div>
   <div class="chatbot-messages">
-    <div class="chat-msg bot" data-i18n="chatWelcome">Bienvenue chez Goût du Pays ! Comment puis-je vous aider ? Réservations, carte, horaires… je suis à votre service.</div>
+    <div class="chat-msg bot" data-i18n="chatWelcome">Bienvenue chez Goût du Pays ! Comment puis-je vous aider ?</div>
   </div>
-  <div class="chatbot-typing">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="chatbot-typing"><span></span><span></span><span></span></div>
   <div class="chatbot-input">
     <input type="text" data-i18n-placeholder="chatPlaceholder" placeholder="Votre question…">
     <button onclick="sendChat()">
@@ -266,6 +266,8 @@
   </div>
 </div>
 
-<script src="script.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/chatbot.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

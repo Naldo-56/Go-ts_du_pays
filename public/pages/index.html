@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Goût du Pays — Restaurant Gastronomique Béninois</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/chatbot.css">
 </head>
 <body>
 
 <!-- ═══ NAV ═══ -->
 <nav class="nav">
   <div class="container">
-    <a href="index.html" class="nav-logo">Goût du <span>Pays</span></a>
+    <a href="/" class="nav-logo">Goût du <span>Pays</span></a>
     <ul class="nav-links">
       <li><a href="#home" data-i18n="navHome">Accueil</a></li>
       <li><a href="#story" data-i18n="navStory">Notre Histoire</a></li>
@@ -37,7 +40,7 @@
     <p class="hero-subtitle" data-i18n="heroSub">Cuisine Béninoise d'Exception</p>
     <h1 data-i18n="heroTitle">Goût du <em>Pays</em></h1>
     <p class="hero-tagline" data-i18n="heroTagline">Un voyage culinaire au cœur du Bénin, sublimé par l'art de la gastronomie française.</p>
-    <a href="menu.html" class="btn" data-i18n="heroCta">Découvrir la Carte</a>
+    <a href="/menu" class="btn" data-i18n="heroCta">Découvrir la Carte</a>
   </div>
 </section>
 
@@ -46,7 +49,7 @@
   <div class="container">
     <div class="intro-grid">
       <div class="intro-image fade-up">
-        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800&q=80" alt="Chef preparing dish">
+        <img src="/images/chef.jpg" alt="Chef preparing dish">
       </div>
       <div class="intro-text fade-up">
         <p class="label" data-i18n="introLabel">Notre Philosophie</p>
@@ -67,12 +70,10 @@
       <h2 data-i18n="dishesH2">Nos Plats Signatures</h2>
       <div class="divider"></div>
     </div>
-
     <div class="dishes-grid">
-      <!-- Dish 1 -->
-      <a href="menu.html" class="dish-card fade-up">
+      <a href="/menu" class="dish-card fade-up">
         <div class="dish-card-img">
-          <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=700&q=80" alt="Amiwo Royal">
+          <img src="/images/dish-amiwo.jpg" alt="Amiwo Royal">
         </div>
         <div class="dish-card-body">
           <div class="dish-number">01</div>
@@ -81,11 +82,9 @@
           <p class="dish-price" data-i18n="dish1Price">18 000 FCFA</p>
         </div>
       </a>
-
-      <!-- Dish 2 -->
-      <a href="menu.html" class="dish-card fade-up">
+      <a href="/menu" class="dish-card fade-up">
         <div class="dish-card-img">
-          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&q=80" alt="Gboma Dessi">
+          <img src="/images/dish-gboma.jpg" alt="Gboma Dessi">
         </div>
         <div class="dish-card-body">
           <div class="dish-number">02</div>
@@ -94,11 +93,9 @@
           <p class="dish-price" data-i18n="dish2Price">15 000 FCFA</p>
         </div>
       </a>
-
-      <!-- Dish 3 -->
-      <a href="menu.html" class="dish-card fade-up">
+      <a href="/menu" class="dish-card fade-up">
         <div class="dish-card-img">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80" alt="Wagassi Doré">
+          <img src="/images/dish-wagassi.jpg" alt="Wagassi Doré">
         </div>
         <div class="dish-card-body">
           <div class="dish-number">03</div>
@@ -108,9 +105,8 @@
         </div>
       </a>
     </div>
-
     <div class="dishes-cta fade-up">
-      <a href="menu.html" class="btn" data-i18n="dishesCta">Voir la Carte Complète</a>
+      <a href="/menu" class="btn" data-i18n="dishesCta">Voir la Carte Complète</a>
     </div>
   </div>
 </section>
@@ -137,9 +133,9 @@
       <div>
         <h4 data-i18n="footerNav">Navigation</h4>
         <ul>
-          <li><a href="#home" data-i18n="navHome">Accueil</a></li>
+          <li><a href="/" data-i18n="navHome">Accueil</a></li>
           <li><a href="#story" data-i18n="navStory">Notre Histoire</a></li>
-          <li><a href="menu.html" data-i18n="navMenu">La Carte</a></li>
+          <li><a href="/menu" data-i18n="navMenu">La Carte</a></li>
           <li><a href="#reserve" data-i18n="navReserve">Réserver</a></li>
         </ul>
       </div>
@@ -171,19 +167,16 @@
 <button class="chatbot-fab" onclick="toggleChat()" aria-label="Chat">
   <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
 </button>
-
 <div class="chatbot-window">
   <div class="chatbot-header">
     <div class="dot"></div>
     <h4 data-i18n="chatTitle">Concierge</h4>
-    <button onclick="closeChat()">✕</button>
+    <button onclick="closeChat()">&#x2715;</button>
   </div>
   <div class="chatbot-messages">
-    <div class="chat-msg bot" data-i18n="chatWelcome">Bienvenue chez Goût du Pays ! 🌿 Comment puis-je vous aider ? Réservations, carte, horaires… je suis à votre service.</div>
+    <div class="chat-msg bot" data-i18n="chatWelcome">Bienvenue chez Goût du Pays ! Comment puis-je vous aider ? Réservations, carte, horaires… je suis à votre service.</div>
   </div>
-  <div class="chatbot-typing">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="chatbot-typing"><span></span><span></span><span></span></div>
   <div class="chatbot-input">
     <input type="text" data-i18n-placeholder="chatPlaceholder" placeholder="Votre question…">
     <button onclick="sendChat()">
@@ -192,6 +185,8 @@
   </div>
 </div>
 
-<script src="script.js"></script>
+<script src="/js/i18n.js"></script>
+<script src="/js/chatbot.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
