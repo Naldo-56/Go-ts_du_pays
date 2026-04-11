@@ -1,0 +1,12 @@
+{
+  "name": "gout-du-pays",
+  "version": "1.0.0",
+  "description": "Goût du Pays — Restaurant Gastronomique Béninois",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

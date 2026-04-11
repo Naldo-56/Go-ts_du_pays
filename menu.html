@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Carte — Goût du Pays</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav scrolled">
+  <div class="container">
+    <a href="index.html" class="nav-logo">Goût du <span>Pays</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="navHome">Accueil</a></li>
+      <li><a href="index.html#story" data-i18n="navStory">Notre Histoire</a></li>
+      <li><a href="menu.html" data-i18n="navMenu">La Carte</a></li>
+      <li><a href="index.html#reserve" data-i18n="navReserve">Réserver</a></li>
+      <li>
+        <div class="lang-toggle">
+          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ MENU HERO ═══ -->
+<section class="menu-hero">
+  <div class="bg"></div>
+  <div class="container">
+    <p class="hero-subtitle" data-i18n="heroSub">Cuisine Béninoise d'Exception</p>
+    <h1 data-i18n="menuHeroH1">La Carte</h1>
+    <p data-i18n="menuHeroP">Un voyage à travers les saveurs du Bénin</p>
+  </div>
+</section>
+
+<!-- ═══ MENU CONTENT ═══ -->
+<section class="menu-section section-pad">
+  <div class="container">
+
+    <p style="margin-bottom:2.5rem;"><a href="index.html" class="text-gold" data-i18n="menuBack">← Retour à l'accueil</a></p>
+
+    <!-- STARTERS -->
+    <div class="menu-category fade-up">
+      <div class="menu-category-header">
+        <h2 data-i18n="catStarters">Entrées</h2>
+        <div class="line"></div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="s1n">Wagassi Doré</div><div class="menu-item-desc" data-i18n="s1d">Fromage peul grillé, miel d'acacia, salade de mangue verte, vinaigrette au gingembre</div></div>
+        <div class="menu-item-price" data-i18n="ps1">12 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="s2n">Atassi du Chef</div><div class="menu-item-desc" data-i18n="s2d">Riz et haricots fondants, vinaigrette de tomates cerises, chips de plantain</div></div>
+        <div class="menu-item-price" data-i18n="ps2">9 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="s3n">Salade Cotonou</div><div class="menu-item-desc" data-i18n="s3d">Avocat, crabe frais, suprêmes de pamplemousse, huile de sésame</div></div>
+        <div class="menu-item-price" data-i18n="ps3">11 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="s4n">Akara Croustillant</div><div class="menu-item-desc" data-i18n="s4d">Beignets de haricots blancs, sauce pimentée douce, crudités fraîches</div></div>
+        <div class="menu-item-price" data-i18n="ps4">8 000 F</div>
+      </div>
+    </div>
+
+    <!-- MAINS -->
+    <div class="menu-category fade-up">
+      <div class="menu-category-header">
+        <h2 data-i18n="catMains">Plats Principaux</h2>
+        <div class="line"></div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="m1n">Amiwo Royal</div><div class="menu-item-desc" data-i18n="m1d">Polenta de maïs au jus de tomate, poulet braisé aux épices du terroir</div></div>
+        <div class="menu-item-price" data-i18n="pm1">18 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="m2n">Gboma Dessi</div><div class="menu-item-desc" data-i18n="m2d">Épinards locaux mijotés au crabe frais, huile de palme rouge, piment doux</div></div>
+        <div class="menu-item-price" data-i18n="pm2">15 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="m3n">Djidja d'Agneau</div><div class="menu-item-desc" data-i18n="m3d">Carré d'agneau en croûte d'épices locales, igname pilée, jus au thym</div></div>
+        <div class="menu-item-price" data-i18n="pm3">24 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="m4n">Capitaine Grillé</div><div class="menu-item-desc" data-i18n="m4d">Poisson capitaine entier, beurre de citronnelle, légumes du marché</div></div>
+        <div class="menu-item-price" data-i18n="pm4">22 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="m5n">Yassa Béninois</div><div class="menu-item-desc" data-i18n="m5d">Pintade fermière marinée aux oignons caramélisés, riz parfumé</div></div>
+        <div class="menu-item-price" data-i18n="pm5">17 000 F</div>
+      </div>
+    </div>
+
+    <!-- GRILLS -->
+    <div class="menu-category fade-up">
+      <div class="menu-category-header">
+        <h2 data-i18n="catGrills">Grillades & Braisés</h2>
+        <div class="line"></div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="g1n">Brochettes Mixtes</div><div class="menu-item-desc" data-i18n="g1d">Bœuf, poulet et crevettes, marinade au gingembre et citron vert</div></div>
+        <div class="menu-item-price" data-i18n="pg1">16 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="g2n">Poulet Braisé Entier</div><div class="menu-item-desc" data-i18n="g2d">Poulet fermier mariné 24h, piment et ail, accompagné de alloco</div></div>
+        <div class="menu-item-price" data-i18n="pg2">14 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="g3n">Côtes de Porc Fumées</div><div class="menu-item-desc" data-i18n="g3d">Cuisson lente au bois d'acacia, sauce moutarde-miel locale</div></div>
+        <div class="menu-item-price" data-i18n="pg3">15 000 F</div>
+      </div>
+    </div>
+
+    <!-- SIDES -->
+    <div class="menu-category fade-up">
+      <div class="menu-category-header">
+        <h2 data-i18n="catSides">Accompagnements</h2>
+        <div class="line"></div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="sd1n">Pâte Rouge (Owo)</div><div class="menu-item-desc" data-i18n="sd1d">Pâte de maïs fermenté traditionnelle</div></div>
+        <div class="menu-item-price" data-i18n="psd1">2 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="sd2n">Igname Pilée</div><div class="menu-item-desc" data-i18n="sd2d">Igname pilée à la main, texture soyeuse</div></div>
+        <div class="menu-item-price" data-i18n="psd2">3 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="sd3n">Alloco</div><div class="menu-item-desc" data-i18n="sd3d">Bananes plantain frites, pointe de piment</div></div>
+        <div class="menu-item-price" data-i18n="psd3">2 500 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="sd4n">Riz Jollof</div><div class="menu-item-desc" data-i18n="sd4d">Riz parfumé aux tomates et épices ouest-africaines</div></div>
+        <div class="menu-item-price" data-i18n="psd4">3 000 F</div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="menu-category fade-up">
+      <div class="menu-category-header">
+        <h2 data-i18n="catDesserts">Desserts</h2>
+        <div class="line"></div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="d1n">Beignets au Miel</div><div class="menu-item-desc" data-i18n="d1d">Beignets soufflés, miel de la Pendjari, crème vanille</div></div>
+        <div class="menu-item-price" data-i18n="pd1">7 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="d2n">Ananas Rôti</div><div class="menu-item-desc" data-i18n="d2d">Ananas caramélisé au poivre de Penja, sorbet coco</div></div>
+        <div class="menu-item-price" data-i18n="pd2">8 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="d3n">Moelleux Cacao</div><div class="menu-item-desc" data-i18n="d3d">Fondant au cacao du Mono, coulis de fruits de la passion</div></div>
+        <div class="menu-item-price" data-i18n="pd3">9 000 F</div>
+      </div>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="menu-category fade-up">
+      <div class="menu-category-header">
+        <h2 data-i18n="catDrinks">Boissons</h2>
+        <div class="line"></div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="dr1n">Sodabi Cocktail</div><div class="menu-item-desc" data-i18n="dr1d">Sodabi artisanal, citron vert, sirop de gingembre, menthe fraîche</div></div>
+        <div class="menu-item-price" data-i18n="pdr1">6 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="dr2n">Bissap Prestige</div><div class="menu-item-desc" data-i18n="dr2d">Infusion d'hibiscus, vanille, agrumes</div></div>
+        <div class="menu-item-price" data-i18n="pdr2">3 500 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="dr3n">Tchoukoutou Revisité</div><div class="menu-item-desc" data-i18n="dr3d">Bière de sorgho artisanale, notes épicées</div></div>
+        <div class="menu-item-price" data-i18n="pdr3">4 000 F</div>
+      </div>
+      <div class="menu-item">
+        <div><div class="menu-item-name" data-i18n="dr4n">Jus de Baobab</div><div class="menu-item-desc" data-i18n="dr4d">Pain de singe frais, sucre de canne, eau de fleur d'oranger</div></div>
+        <div class="menu-item-price" data-i18n="pdr4">3 000 F</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ RESERVATION BAND ═══ -->
+<section class="reservation-band">
+  <div class="bg"></div>
+  <div class="container fade-up">
+    <p class="hero-subtitle" data-i18n="heroSub">Cuisine Béninoise d'Exception</p>
+    <h2 data-i18n="resBandH2">Une Table Vous Attend</h2>
+    <p data-i18n="resBandP">Réservez votre expérience gastronomique et laissez-vous transporter par les saveurs du Bénin.</p>
+    <a href="tel:+22921300000" class="btn btn-filled" data-i18n="resBandCta">Réserver une Table</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">Goût du <span>Pays</span></div>
+        <p data-i18n="footerDesc">Restaurant gastronomique béninois. Une expérience culinaire unique au cœur de Cotonou.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerNav">Navigation</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="navHome">Accueil</a></li>
+          <li><a href="index.html#story" data-i18n="navStory">Notre Histoire</a></li>
+          <li><a href="menu.html" data-i18n="navMenu">La Carte</a></li>
+          <li><a href="index.html#reserve" data-i18n="navReserve">Réserver</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footerHours">Horaires</h4>
+        <p class="info" data-i18n="footerMon">Lun – Ven : 12h00 – 15h00</p>
+        <p class="info" data-i18n="footerEve">Mer – Sam : 19h00 – 23h00</p>
+        <p class="info" data-i18n="footerSun">Dim : 12h00 – 16h00 (Brunch)</p>
+        <p class="info" data-i18n="footerClosed">Mar : Fermé</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerContact">Contact</h4>
+        <p class="info" data-i18n="footerAddr">42 Boulevard de la Marina, Cotonou, Bénin</p>
+        <p class="info" data-i18n="footerPhone">+229 21 30 00 00</p>
+        <p class="info" data-i18n="footerEmail">contact@goutdupays.bj</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footerCopy">© 2026 Goût du Pays. Tous droits réservés.</p>
+      <div class="lang-toggle">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ CHATBOT ═══ -->
+<button class="chatbot-fab" onclick="toggleChat()" aria-label="Chat">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+</button>
+
+<div class="chatbot-window">
+  <div class="chatbot-header">
+    <div class="dot"></div>
+    <h4 data-i18n="chatTitle">Concierge</h4>
+    <button onclick="closeChat()">✕</button>
+  </div>
+  <div class="chatbot-messages">
+    <div class="chat-msg bot" data-i18n="chatWelcome">Bienvenue chez Goût du Pays ! Comment puis-je vous aider ? Réservations, carte, horaires… je suis à votre service.</div>
+  </div>
+  <div class="chatbot-typing">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" data-i18n-placeholder="chatPlaceholder" placeholder="Votre question…">
+    <button onclick="sendChat()">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goût du Pays — Restaurant Gastronomique Béninois</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-logo">Goût du <span>Pays</span></a>
+    <ul class="nav-links">
+      <li><a href="#home" data-i18n="navHome">Accueil</a></li>
+      <li><a href="#story" data-i18n="navStory">Notre Histoire</a></li>
+      <li><a href="#menu-preview" data-i18n="navMenu">La Carte</a></li>
+      <li><a href="#reserve" data-i18n="navReserve">Réserver</a></li>
+      <li>
+        <div class="lang-toggle">
+          <button data-lang="fr" class="active">FR</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-subtitle" data-i18n="heroSub">Cuisine Béninoise d'Exception</p>
+    <h1 data-i18n="heroTitle">Goût du <em>Pays</em></h1>
+    <p class="hero-tagline" data-i18n="heroTagline">Un voyage culinaire au cœur du Bénin, sublimé par l'art de la gastronomie française.</p>
+    <a href="menu.html" class="btn" data-i18n="heroCta">Découvrir la Carte</a>
+  </div>
+</section>
+
+<!-- ═══ INTRO / OUR STORY ═══ -->
+<section class="intro section-pad" id="story">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-image fade-up">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800&q=80" alt="Chef preparing dish">
+      </div>
+      <div class="intro-text fade-up">
+        <p class="label" data-i18n="introLabel">Notre Philosophie</p>
+        <h2 data-i18n="introH2">L'Âme du Bénin<br>dans Chaque Assiette</h2>
+        <div class="divider" style="margin-left:0"></div>
+        <p data-i18n="introP1">Chez Goût du Pays, nous célébrons les saveurs ancestrales du Bénin avec une touche contemporaine. Chaque plat raconte l'histoire d'un terroir riche et vibrant.</p>
+        <p data-i18n="introP2">Nos chefs sélectionnent les meilleurs ingrédients locaux pour créer une expérience gustative unique, entre tradition et modernité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SIGNATURE DISHES ═══ -->
+<section class="dishes section-pad" id="menu-preview">
+  <div class="container">
+    <div class="dishes-header fade-up">
+      <p class="label" data-i18n="dishesLabel">La Carte</p>
+      <h2 data-i18n="dishesH2">Nos Plats Signatures</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="dishes-grid">
+      <!-- Dish 1 -->
+      <a href="menu.html" class="dish-card fade-up">
+        <div class="dish-card-img">
+          <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=700&q=80" alt="Amiwo Royal">
+        </div>
+        <div class="dish-card-body">
+          <div class="dish-number">01</div>
+          <h3 data-i18n="dish1Name">Amiwo Royal</h3>
+          <p class="dish-desc" data-i18n="dish1Desc">Polenta de maïs au jus de tomate, accompagnée de poulet braisé aux épices du terroir.</p>
+          <p class="dish-price" data-i18n="dish1Price">18 000 FCFA</p>
+        </div>
+      </a>
+
+      <!-- Dish 2 -->
+      <a href="menu.html" class="dish-card fade-up">
+        <div class="dish-card-img">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&q=80" alt="Gboma Dessi">
+        </div>
+        <div class="dish-card-body">
+          <div class="dish-number">02</div>
+          <h3 data-i18n="dish2Name">Gboma Dessi</h3>
+          <p class="dish-desc" data-i18n="dish2Desc">Épinards locaux mijotés au crabe frais, huile de palme rouge et piment doux.</p>
+          <p class="dish-price" data-i18n="dish2Price">15 000 FCFA</p>
+        </div>
+      </a>
+
+      <!-- Dish 3 -->
+      <a href="menu.html" class="dish-card fade-up">
+        <div class="dish-card-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80" alt="Wagassi Doré">
+        </div>
+        <div class="dish-card-body">
+          <div class="dish-number">03</div>
+          <h3 data-i18n="dish3Name">Wagassi Doré</h3>
+          <p class="dish-desc" data-i18n="dish3Desc">Fromage peul grillé, miel d'acacia, salade de mangue verte et vinaigrette au gingembre.</p>
+          <p class="dish-price" data-i18n="dish3Price">12 000 FCFA</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="dishes-cta fade-up">
+      <a href="menu.html" class="btn" data-i18n="dishesCta">Voir la Carte Complète</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESERVATION BAND ═══ -->
+<section class="reservation-band" id="reserve">
+  <div class="bg"></div>
+  <div class="container fade-up">
+    <p class="hero-subtitle" data-i18n="heroSub">Cuisine Béninoise d'Exception</p>
+    <h2 data-i18n="resBandH2">Une Table Vous Attend</h2>
+    <p data-i18n="resBandP">Réservez votre expérience gastronomique et laissez-vous transporter par les saveurs du Bénin.</p>
+    <a href="tel:+22921300000" class="btn btn-filled" data-i18n="resBandCta">Réserver une Table</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">Goût du <span>Pays</span></div>
+        <p data-i18n="footerDesc">Restaurant gastronomique béninois. Une expérience culinaire unique au cœur de Cotonou.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerNav">Navigation</h4>
+        <ul>
+          <li><a href="#home" data-i18n="navHome">Accueil</a></li>
+          <li><a href="#story" data-i18n="navStory">Notre Histoire</a></li>
+          <li><a href="menu.html" data-i18n="navMenu">La Carte</a></li>
+          <li><a href="#reserve" data-i18n="navReserve">Réserver</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footerHours">Horaires</h4>
+        <p class="info" data-i18n="footerMon">Lun – Ven : 12h00 – 15h00</p>
+        <p class="info" data-i18n="footerEve">Mer – Sam : 19h00 – 23h00</p>
+        <p class="info" data-i18n="footerSun">Dim : 12h00 – 16h00 (Brunch)</p>
+        <p class="info" data-i18n="footerClosed">Mar : Fermé</p>
+      </div>
+      <div>
+        <h4 data-i18n="footerContact">Contact</h4>
+        <p class="info" data-i18n="footerAddr">42 Boulevard de la Marina, Cotonou, Bénin</p>
+        <p class="info" data-i18n="footerPhone">+229 21 30 00 00</p>
+        <p class="info" data-i18n="footerEmail">contact@goutdupays.bj</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footerCopy">© 2026 Goût du Pays. Tous droits réservés.</p>
+      <div class="lang-toggle">
+        <button data-lang="fr" class="active">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ CHATBOT ═══ -->
+<button class="chatbot-fab" onclick="toggleChat()" aria-label="Chat">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+</button>
+
+<div class="chatbot-window">
+  <div class="chatbot-header">
+    <div class="dot"></div>
+    <h4 data-i18n="chatTitle">Concierge</h4>
+    <button onclick="closeChat()">✕</button>
+  </div>
+  <div class="chatbot-messages">
+    <div class="chat-msg bot" data-i18n="chatWelcome">Bienvenue chez Goût du Pays ! 🌿 Comment puis-je vous aider ? Réservations, carte, horaires… je suis à votre service.</div>
+  </div>
+  <div class="chatbot-typing">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" data-i18n-placeholder="chatPlaceholder" placeholder="Votre question…">
+    <button onclick="sendChat()">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
