@@ -11,7 +11,6 @@
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
 <nav class="nav">
   <div class="container">
     <a href="/" class="nav-logo">Goût du <span>Pays</span></a>
@@ -33,7 +32,6 @@
   </div>
 </nav>
 
-<!-- ═══ HERO ═══ -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-content">
@@ -44,7 +42,6 @@
   </div>
 </section>
 
-<!-- ═══ INTRO / OUR STORY ═══ -->
 <section class="intro section-pad" id="story">
   <div class="container">
     <div class="intro-grid">
@@ -62,7 +59,6 @@
   </div>
 </section>
 
-<!-- ═══ SIGNATURE DISHES ═══ -->
 <section class="dishes section-pad" id="menu-preview">
   <div class="container">
     <div class="dishes-header fade-up">
@@ -111,18 +107,67 @@
   </div>
 </section>
 
-<!-- ═══ RESERVATION BAND ═══ -->
 <section class="reservation-band" id="reserve">
   <div class="bg"></div>
   <div class="container fade-up">
-    <p class="hero-subtitle" data-i18n="heroSub">Cuisine Béninoise d'Exception</p>
-    <h2 data-i18n="resBandH2">Une Table Vous Attend</h2>
-    <p data-i18n="resBandP">Réservez votre expérience gastronomique et laissez-vous transporter par les saveurs du Bénin.</p>
-    <a href="tel:+22921300000" class="btn btn-filled" data-i18n="resBandCta">Réserver une Table</a>
+    <h2 data-i18n="resBandH2">Réserver une Table</h2>
+    <p data-i18n="resBandP">Choisissez votre créneau et recevez la confirmation par WhatsApp.</p>
+    <form id="res-form" class="res-form">
+      <div class="res-error"></div>
+      <div class="res-success"></div>
+      <div class="res-field full">
+        <label data-i18n="resLabelName">Nom complet</label>
+        <input type="text" id="res-name" required>
+      </div>
+      <div class="res-field full">
+        <label data-i18n="resLabelPhone">Numéro WhatsApp</label>
+        <div class="res-phone-group">
+          <select id="res-code">
+            <option value="229">+229 BJ</option>
+            <option value="228">+228 TG</option>
+            <option value="234">+234 NG</option>
+            <option value="233">+233 GH</option>
+            <option value="225">+225 CI</option>
+            <option value="226">+226 BF</option>
+            <option value="227">+227 NE</option>
+            <option value="221">+221 SN</option>
+            <option value="223">+223 ML</option>
+            <option value="224">+224 GN</option>
+            <option value="237">+237 CM</option>
+            <option value="241">+241 GA</option>
+            <option value="242">+242 CG</option>
+            <option value="243">+243 CD</option>
+            <option value="33">+33 FR</option>
+            <option value="32">+32 BE</option>
+            <option value="41">+41 CH</option>
+            <option value="1">+1 US/CA</option>
+            <option value="44">+44 GB</option>
+            <option value="49">+49 DE</option>
+          </select>
+          <input type="tel" id="res-phone" placeholder="97 00 00 00" required>
+        </div>
+      </div>
+      <div class="res-field">
+        <label data-i18n="resLabelDate">Date</label>
+        <input type="date" id="res-date" required>
+      </div>
+      <div class="res-field">
+        <label data-i18n="resLabelTime">Créneau</label>
+        <select id="res-time" required>
+          <option value="lunch" data-i18n="resTimeLunch">Déjeuner (12h – 15h)</option>
+          <option value="dinner" data-i18n="resTimeDinner">Dîner (19h – 23h)</option>
+          <option value="brunch" data-i18n="resTimeBrunch">Brunch (12h – 16h)</option>
+        </select>
+      </div>
+      <div class="res-field">
+        <label data-i18n="resLabelGuests">Couverts</label>
+        <input type="number" id="res-guests" min="1" max="20" value="2" required>
+      </div>
+      <button type="submit" class="btn btn-filled full" data-i18n="resCta">Réserver</button>
+    </form>
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -141,10 +186,10 @@
       </div>
       <div>
         <h4 data-i18n="footerHours">Horaires</h4>
-        <p class="info" data-i18n="footerMon">Lun – Ven : 12h00 – 15h00</p>
-        <p class="info" data-i18n="footerEve">Mer – Sam : 19h00 – 23h00</p>
+        <p class="info" data-i18n="footerLunch">Mar – Sam : 12h00 – 15h00</p>
+        <p class="info" data-i18n="footerDinner">Mer – Sam : 19h00 – 23h00</p>
         <p class="info" data-i18n="footerSun">Dim : 12h00 – 16h00 (Brunch)</p>
-        <p class="info" data-i18n="footerClosed">Mar : Fermé</p>
+        <p class="info" data-i18n="footerClosed">Lun : Fermé</p>
       </div>
       <div>
         <h4 data-i18n="footerContact">Contact</h4>
@@ -163,7 +208,6 @@
   </div>
 </footer>
 
-<!-- ═══ CHATBOT ═══ -->
 <button class="chatbot-fab" onclick="toggleChat()" aria-label="Chat">
   <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
 </button>

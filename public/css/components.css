@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════
-   components.css — Boutons, cartes, toggle langue
-   ═══════════════════════════════════════════════════════ */
-
-/* ── Boutons ──────────────────────────────────────────── */
 .btn {
   display: inline-block;
   font-family: var(--sans);
@@ -29,7 +24,6 @@
   color: var(--bg);
 }
 
-/* ── Toggle Langue ────────────────────────────────────── */
 .lang-toggle {
   display: flex; gap: 4px;
   background: rgba(255,255,255,.06);
@@ -53,7 +47,6 @@
   color: var(--bg);
 }
 
-/* ── Cartes Plats ─────────────────────────────────────── */
 .dish-card {
   position: relative;
   background: var(--bg);

@@ -1,6 +1,12 @@
-/* ═══════════════════════════════════════════════════════
-   chatbot.js — Widget chatbot concierge
-   ═══════════════════════════════════════════════════════ */
+var chatMsgCount = 1;
+
+function growChat() {
+  chatMsgCount++;
+  var win = document.querySelector('.chatbot-window');
+  if (!win) return;
+  var h = Math.min(360 + chatMsgCount * 32, window.innerHeight * 0.7);
+  win.style.setProperty('--chat-h', h + 'px');
+}
 
 function toggleChat() {
   document.querySelector('.chatbot-window')?.classList.toggle('open');
@@ -11,33 +17,34 @@ function closeChat() {
 }
 
 function sendChat() {
-  const input = document.querySelector('.chatbot-input input');
-  const msg = input.value.trim();
+  var input = document.querySelector('.chatbot-input input');
+  var msg = input.value.trim();
   if (!msg) return;
 
   appendMsg(msg, 'user');
   input.value = '';
   showTyping();
 
-  const delay = 800 + Math.random() * 1200;
-  setTimeout(() => {
+  var delay = 800 + Math.random() * 1200;
+  setTimeout(function () {
     hideTyping();
     appendMsg(getBotReply(msg), 'bot');
   }, delay);
 }
 
 function appendMsg(text, type) {
-  const container = document.querySelector('.chatbot-messages');
-  const div = document.createElement('div');
-  div.className = `chat-msg ${type}`;
+  var container = document.querySelector('.chatbot-messages');
+  var div = document.createElement('div');
+  div.className = 'chat-msg ' + type;
   div.textContent = text;
   container.appendChild(div);
   container.scrollTop = container.scrollHeight;
+  growChat();
 }
 
 function showTyping() {
   document.querySelector('.chatbot-typing')?.classList.add('show');
-  const container = document.querySelector('.chatbot-messages');
+  var container = document.querySelector('.chatbot-messages');
   container.scrollTop = container.scrollHeight;
 }
 
@@ -46,13 +53,13 @@ function hideTyping() {
 }
 
 function getBotReply(msg) {
-  const m = msg.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  const isFr = currentLang === 'fr';
+  var m = msg.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  var isFr = currentLang === 'fr';
 
   if (/reserv|book|table/.test(m)) {
     return isFr
-      ? "Avec plaisir ! Vous pouvez réserver par téléphone au +229 21 30 00 00 ou directement sur place. Nous vous recommandons de réserver au moins 24h à l'avance pour le dîner."
-      : "Of course! You can reserve by phone at +229 21 30 00 00 or in person. We recommend booking at least 24h in advance for dinner.";
+      ? "Avec plaisir ! Remplissez le formulaire dans la section Réserver sur notre page d'accueil, ou appelez-nous au +229 21 30 00 00. Vous recevrez la confirmation par WhatsApp."
+      : "Of course! Fill out the form in the Reserve section on our home page, or call us at +229 21 30 00 00. You'll receive confirmation via WhatsApp.";
   }
 
   if (/meilleur|best|top|recommend|conseil|populaire|popular|prefer|favori|favorite/.test(m)) {
@@ -69,8 +76,8 @@ function getBotReply(msg) {
 
   if (/heure|hour|horaire|schedule|ouvert|open|ferm|close|quand|when/.test(m)) {
     return isFr
-      ? "Nous sommes ouverts du lundi au vendredi de 12h à 15h pour le déjeuner, du mercredi au samedi de 19h à 23h pour le dîner, et le dimanche de 12h à 16h pour le brunch. Nous sommes fermés le mardi."
-      : "We're open Monday to Friday from 12 PM to 3 PM for lunch, Wednesday to Saturday from 7 PM to 11 PM for dinner, and Sunday from 12 PM to 4 PM for brunch. Closed on Tuesdays.";
+      ? "Nous sommes ouverts du mardi au samedi de 12h à 15h pour le déjeuner, du mercredi au samedi de 19h à 23h pour le dîner, et le dimanche de 12h à 16h pour le brunch. Nous sommes fermés le lundi."
+      : "We're open Tuesday to Saturday from 12 PM to 3 PM for lunch, Wednesday to Saturday from 7 PM to 11 PM for dinner, and Sunday from 12 PM to 4 PM for brunch. Closed on Mondays.";
   }
 
   if (/adresse|address|ou |where|lieu|location|trouver|find|direction/.test(m)) {
@@ -108,7 +115,7 @@ function getBotReply(msg) {
     : "That's a great question! To give you the best possible answer, I'd recommend reaching out to our customer service team at +229 21 30 00 00 or via email at contact@goutdupays.bj. They'll be happy to help!";
 }
 
-document.addEventListener('keydown', e => {
+document.addEventListener('keydown', function (e) {
   if (e.key === 'Enter' && document.activeElement?.closest('.chatbot-input')) {
     sendChat();
   }

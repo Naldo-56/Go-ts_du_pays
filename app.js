@@ -5,10 +5,8 @@ const routes = require('./routes');
 
 const app = express();
 
-// Fichiers statiques (CSS, JS, images) servis depuis /public
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Routes de l'application
 app.use('/', routes);
 
 app.listen(config.port, () => {
