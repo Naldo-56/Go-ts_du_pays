@@ -5,11 +5,13 @@
   font-weight: 700;
   letter-spacing: .2em;
   text-transform: uppercase;
-  padding: 16px 48px;
+  padding: 14px 40px;
   border: 1px solid var(--gold);
+  border-radius: var(--radius);
   color: var(--gold);
   background: transparent;
   transition: all .4s;
+  text-align: center;
 }
 .btn:hover {
   background: var(--gold);
@@ -22,6 +24,10 @@
 .btn-filled:hover {
   background: var(--gold-light);
   color: var(--bg);
+}
+.btn-sm {
+  padding: 10px 24px;
+  font-size: .72rem;
 }
 
 .lang-toggle {
@@ -50,6 +56,7 @@
 .dish-card {
   position: relative;
   background: var(--bg);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
   transition: transform .5s ease, box-shadow .5s ease;
@@ -83,4 +90,57 @@
 .dish-card-body .dish-price {
   font-family: var(--sans); font-size: .85rem;
   letter-spacing: .1em; color: var(--gold); font-weight: 700;
+}
+
+.nav-cta {
+  background: var(--gold) !important;
+  color: var(--bg) !important;
+  padding: 8px 24px !important;
+  border-radius: var(--radius) !important;
+  font-weight: 700 !important;
+  transition: background .3s, transform .3s !important;
+}
+.nav-cta:hover {
+  background: var(--gold-light) !important;
+  transform: scale(1.05);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.menu-bottom-cta {
+  text-align: center;
+  padding: clamp(3rem, 6vh, 5rem) 0 0;
+  border-top: 1px solid rgba(201,168,76,.1);
+  margin-top: clamp(2rem, 4vh, 3rem);
+}
+.menu-bottom-cta h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+.menu-bottom-cta p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 480px) {
+  .btn { padding: 12px 28px; font-size: .75rem; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: 100%; max-width: 280px; }
 }

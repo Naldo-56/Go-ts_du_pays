@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Goût du Pays — Restaurant Gastronomique Béninois</title>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/layout.css">
   <link rel="stylesheet" href="/css/components.css">
@@ -18,7 +19,8 @@
       <li><a href="#home" data-i18n="navHome">Accueil</a></li>
       <li><a href="#story" data-i18n="navStory">Notre Histoire</a></li>
       <li><a href="#menu-preview" data-i18n="navMenu">La Carte</a></li>
-      <li><a href="#reserve" data-i18n="navReserve">Réserver</a></li>
+      <li><a href="/commander" data-i18n="navOrder">Commander</a></li>
+      <li><a href="#reserve" class="nav-cta" data-i18n="navReserve">Réserver</a></li>
       <li>
         <div class="lang-toggle">
           <button data-lang="fr" class="active">FR</button>
@@ -38,7 +40,32 @@
     <p class="hero-subtitle" data-i18n="heroSub">Cuisine Béninoise d'Exception</p>
     <h1 data-i18n="heroTitle">Goût du <em>Pays</em></h1>
     <p class="hero-tagline" data-i18n="heroTagline">Un voyage culinaire au cœur du Bénin, sublimé par l'art de la gastronomie française.</p>
-    <a href="/menu" class="btn" data-i18n="heroCta">Découvrir la Carte</a>
+    <div class="hero-actions">
+      <a href="/menu" class="btn" data-i18n="heroCta">Découvrir la Carte</a>
+      <a href="#reserve" class="btn btn-filled" data-i18n="navReserve">Réserver</a>
+    </div>
+  </div>
+</section>
+
+<section class="weekly-dish section-pad" id="weekly">
+  <div class="container">
+    <div class="weekly-dish-grid fade-up">
+      <div class="weekly-dish-img">
+        <img id="weekly-img" src="/images/dish-amiwo.jpg" alt="">
+        <div class="weekly-badge" data-i18n="weeklyBadge">Plat de la Semaine</div>
+      </div>
+      <div class="weekly-dish-info">
+        <p class="label" data-i18n="weeklyLabel">Coup de Cœur Hebdomadaire</p>
+        <h2 id="weekly-name"></h2>
+        <div class="divider" style="margin-left:0"></div>
+        <p class="weekly-desc" id="weekly-desc"></p>
+        <p class="weekly-price" id="weekly-price"></p>
+        <div class="weekly-actions">
+          <a href="/commander" class="btn btn-filled btn-sm" data-i18n="weeklyOrder">Commander</a>
+          <a href="#reserve" class="btn btn-sm" data-i18n="weeklyReserve">Réserver pour goûter</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -59,6 +86,41 @@
   </div>
 </section>
 
+<section class="daily-menu section-pad" id="daily">
+  <div class="container">
+    <div class="daily-menu-header fade-up">
+      <p class="label" data-i18n="dailyLabel">Aujourd'hui</p>
+      <h2 data-i18n="dailyH2">Menu du Jour</h2>
+      <div class="divider"></div>
+      <p class="daily-sub" data-i18n="dailySub">Entrée + Plat + Dessert</p>
+    </div>
+    <div class="daily-menu-grid fade-up">
+      <div class="daily-card">
+        <span class="daily-tag" data-i18n="dailyStarter">Entrée</span>
+        <h3 id="daily-starter-name"></h3>
+        <p id="daily-starter-desc"></p>
+      </div>
+      <div class="daily-card">
+        <span class="daily-tag" data-i18n="dailyMain">Plat</span>
+        <h3 id="daily-main-name"></h3>
+        <p id="daily-main-desc"></p>
+      </div>
+      <div class="daily-card">
+        <span class="daily-tag" data-i18n="dailyDessert">Dessert</span>
+        <h3 id="daily-dessert-name"></h3>
+        <p id="daily-dessert-desc"></p>
+      </div>
+    </div>
+    <div class="daily-footer fade-up">
+      <p class="daily-price" data-i18n="dailyPrice">22 000 FCFA</p>
+      <div class="daily-actions">
+        <a href="/commander" class="btn btn-filled btn-sm" data-i18n="dailyOrderCta">Commander ce menu</a>
+        <a href="#reserve" class="btn btn-sm" data-i18n="dailyReserveCta">Réserver et pré-commander</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="dishes section-pad" id="menu-preview">
   <div class="container">
     <div class="dishes-header fade-up">
@@ -68,36 +130,27 @@
     </div>
     <div class="dishes-grid">
       <a href="/menu" class="dish-card fade-up">
-        <div class="dish-card-img">
-          <img src="/images/dish-amiwo.jpg" alt="Amiwo Royal">
-        </div>
+        <div class="dish-card-img"><img src="/images/dish-amiwo.jpg" alt="Amiwo Royal"></div>
         <div class="dish-card-body">
           <div class="dish-number">01</div>
           <h3 data-i18n="dish1Name">Amiwo Royal</h3>
           <p class="dish-desc" data-i18n="dish1Desc">Polenta de maïs au jus de tomate, accompagnée de poulet braisé aux épices du terroir.</p>
-          <!-- <p class="dish-price" data-i18n="dish1Price">18 000 FCFA</p> -->
         </div>
       </a>
       <a href="/menu" class="dish-card fade-up">
-        <div class="dish-card-img">
-          <img src="/images/dish-gboma.jpg" alt="Gboma Dessi">
-        </div>
+        <div class="dish-card-img"><img src="/images/dish-gboma.jpg" alt="Gboma Dessi"></div>
         <div class="dish-card-body">
           <div class="dish-number">02</div>
           <h3 data-i18n="dish2Name">Gboma Dessi</h3>
           <p class="dish-desc" data-i18n="dish2Desc">Épinards locaux mijotés au crabe frais, huile de palme rouge et piment doux.</p>
-          <!-- <p class="dish-price" data-i18n="dish2Price">15 000 FCFA</p> -->
         </div>
       </a>
       <a href="/menu" class="dish-card fade-up">
-        <div class="dish-card-img">
-          <img src="/images/dish-wagassi.jpg" alt="Wagassi Doré">
-        </div>
+        <div class="dish-card-img"><img src="/images/dish-wagassi.jpg" alt="Wagassi Doré"></div>
         <div class="dish-card-body">
           <div class="dish-number">03</div>
           <h3 data-i18n="dish3Name">Wagassi Doré</h3>
           <p class="dish-desc" data-i18n="dish3Desc">Fromage peul grillé, miel d'acacia, salade de mangue verte et vinaigrette au gingembre.</p>
-          <!-- <p class="dish-price" data-i18n="dish3Price">12 000 FCFA</p> -->
         </div>
       </a>
     </div>
@@ -107,14 +160,77 @@
   </div>
 </section>
 
+<section class="chef-picks section-pad" id="chef-picks">
+  <div class="container">
+    <div class="chef-picks-header fade-up">
+      <p class="label" data-i18n="chefLabel">Notre Sélection</p>
+      <h2 data-i18n="chefH2">Recommandations du Chef</h2>
+      <div class="divider"></div>
+      <p class="chef-sub" data-i18n="chefSub">Les incontournables choisis par notre chef pour une expérience complète.</p>
+    </div>
+    <div class="chef-picks-grid">
+      <div class="chef-card fade-up">
+        <span class="chef-step">1</span>
+        <span class="chef-tag" data-i18n="dailyStarter">Entrée</span>
+        <h3 data-i18n="s3n">Salade Cotonou</h3>
+        <p data-i18n="s3d">Avocat, crabe frais, suprêmes de pamplemousse, huile de sésame</p>
+        <span class="chef-price" data-i18n="ps3">11 000 F</span>
+      </div>
+      <div class="chef-card fade-up">
+        <span class="chef-step">2</span>
+        <span class="chef-tag" data-i18n="dailyMain">Plat</span>
+        <h3 data-i18n="m3n">Djidja d'Agneau</h3>
+        <p data-i18n="m3d">Carré d'agneau en croûte d'épices locales, igname pilée, jus au thym</p>
+        <span class="chef-price" data-i18n="pm3">24 000 F</span>
+      </div>
+      <div class="chef-card fade-up">
+        <span class="chef-step">3</span>
+        <span class="chef-tag" data-i18n="dailyDessert">Dessert</span>
+        <h3 data-i18n="d3n">Moelleux Cacao</h3>
+        <p data-i18n="d3d">Fondant au cacao du Mono, coulis de fruits de la passion</p>
+        <span class="chef-price" data-i18n="pd3">9 000 F</span>
+      </div>
+      <div class="chef-card fade-up">
+        <span class="chef-step">4</span>
+        <span class="chef-tag" data-i18n="chefDrink">Boisson</span>
+        <h3 data-i18n="dr1n">Sodabi Cocktail</h3>
+        <p data-i18n="dr1d">Sodabi artisanal, citron vert, sirop de gingembre, menthe fraîche</p>
+        <span class="chef-price" data-i18n="pdr1">6 000 F</span>
+      </div>
+    </div>
+    <div class="chef-cta fade-up">
+      <a href="/commander" class="btn btn-filled" data-i18n="chefOrderCta">Commander cette sélection</a>
+    </div>
+  </div>
+</section>
+
 <section class="reservation-band" id="reserve">
   <div class="bg"></div>
   <div class="container fade-up">
-    <h2 data-i18n="resBandH2">Réserver une Table</h2>
-    <p data-i18n="resBandP">Choisissez votre créneau et recevez la confirmation par WhatsApp.</p>
+    <div class="res-header">
+      <p class="label" data-i18n="heroSub">Cuisine Béninoise d'Exception</p>
+      <h2 data-i18n="resBandH2">Réserver une Table</h2>
+      <p class="res-sub" data-i18n="resBandP">Remplissez le formulaire et recevez votre confirmation directement par WhatsApp.</p>
+    </div>
     <form id="res-form" class="res-form">
       <div class="res-error"></div>
       <div class="res-success"></div>
+      <div class="res-field">
+        <label data-i18n="resLabelDate">Date</label>
+        <input type="date" id="res-date" required>
+      </div>
+      <div class="res-field">
+        <label data-i18n="resLabelTime">Créneau</label>
+        <select id="res-time" required>
+          <option value="lunch" data-i18n="resTimeLunch">Déjeuner (12h – 15h)</option>
+          <option value="dinner" data-i18n="resTimeDinner">Dîner (19h – 23h)</option>
+          <option value="brunch" data-i18n="resTimeBrunch">Brunch (12h – 16h)</option>
+        </select>
+      </div>
+      <div class="res-field">
+        <label data-i18n="resLabelGuests">Couverts</label>
+        <input type="number" id="res-guests" min="1" max="20" value="2" required>
+      </div>
       <div class="res-field full">
         <label data-i18n="resLabelName">Nom complet</label>
         <input type="text" id="res-name" required>
@@ -147,21 +263,19 @@
           <input type="tel" id="res-phone" placeholder="97 00 00 00" required>
         </div>
       </div>
-      <div class="res-field">
-        <label data-i18n="resLabelDate">Date</label>
-        <input type="date" id="res-date" required>
+      <div class="res-field full">
+        <button type="button" class="res-preorder-toggle" id="preorder-toggle" data-i18n="resPreorderToggle">+ Pré-commander des plats</button>
       </div>
-      <div class="res-field">
-        <label data-i18n="resLabelTime">Créneau</label>
-        <select id="res-time" required>
-          <option value="lunch" data-i18n="resTimeLunch">Déjeuner (12h – 15h)</option>
-          <option value="dinner" data-i18n="resTimeDinner">Dîner (19h – 23h)</option>
-          <option value="brunch" data-i18n="resTimeBrunch">Brunch (12h – 16h)</option>
-        </select>
-      </div>
-      <div class="res-field">
-        <label data-i18n="resLabelGuests">Couverts</label>
-        <input type="number" id="res-guests" min="1" max="20" value="2" required>
+      <div class="res-preorder full" id="res-preorder" style="display:none">
+        <p class="res-preorder-hint" data-i18n="resPreorderHint">Sélectionnez les plats que vous souhaitez retrouver à votre table :</p>
+        <div class="res-preorder-list">
+          <label><input type="checkbox" name="preorder" value="Amiwo Royal"> <span data-i18n="m1n">Amiwo Royal</span> — <span data-i18n="pm1">18 000 F</span></label>
+          <label><input type="checkbox" name="preorder" value="Gboma Dessi"> <span data-i18n="m2n">Gboma Dessi</span> — <span data-i18n="pm2">15 000 F</span></label>
+          <label><input type="checkbox" name="preorder" value="Djidja d'Agneau"> <span data-i18n="m3n">Djidja d'Agneau</span> — <span data-i18n="pm3">24 000 F</span></label>
+          <label><input type="checkbox" name="preorder" value="Capitaine Grillé"> <span data-i18n="m4n">Capitaine Grillé</span> — <span data-i18n="pm4">22 000 F</span></label>
+          <label><input type="checkbox" name="preorder" value="Wagassi Doré"> <span data-i18n="s1n">Wagassi Doré</span> — <span data-i18n="ps1">12 000 F</span></label>
+          <label><input type="checkbox" name="preorder" value="Brochettes Mixtes"> <span data-i18n="g1n">Brochettes Mixtes</span> — <span data-i18n="pg1">16 000 F</span></label>
+        </div>
       </div>
       <button type="submit" class="btn btn-filled full" data-i18n="resCta">Réserver</button>
     </form>
@@ -181,6 +295,7 @@
           <li><a href="/" data-i18n="navHome">Accueil</a></li>
           <li><a href="#story" data-i18n="navStory">Notre Histoire</a></li>
           <li><a href="/menu" data-i18n="navMenu">La Carte</a></li>
+          <li><a href="/commander" data-i18n="navOrder">Commander</a></li>
           <li><a href="#reserve" data-i18n="navReserve">Réserver</a></li>
         </ul>
       </div>
@@ -211,7 +326,7 @@
 <button class="chatbot-fab" onclick="toggleChat()" aria-label="Chat">
   <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
 </button>
-<div class="chatbot-window">
+<div class="chatbot-window" data-lenis-prevent>
   <div class="chatbot-header">
     <div class="dot"></div>
     <h4 data-i18n="chatTitle">Concierge</h4>
@@ -229,6 +344,7 @@
   </div>
 </div>
 
+<script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
 <script src="/js/i18n.js"></script>
 <script src="/js/chatbot.js"></script>
 <script src="/js/main.js"></script>

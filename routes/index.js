@@ -13,6 +13,10 @@ router.get('/menu', (req, res) => {
   res.sendFile(path.join(pagesDir, 'menu.html'));
 });
 
+router.get('/commander', (req, res) => {
+  res.sendFile(path.join(pagesDir, 'commander.html'));
+});
+
 router.post('/api/reservation', async (req, res) => {
   var data = req.body;
 
@@ -62,6 +66,7 @@ router.post('/api/reservation', async (req, res) => {
     slotLabel: slotLabel,
     guests: data.guests,
     lang: data.lang || 'fr',
+    preorders: data.preorders || [],
   };
 
   try {
@@ -72,6 +77,39 @@ router.post('/api/reservation', async (req, res) => {
     res.json({ ok: true });
   } catch (err) {
     console.error('WhatsApp API error:', err);
+    res.status(502).json({ error: 'whatsapp_failed' });
+  }
+});
+
+router.post('/api/order', async (req, res) => {
+  var data = req.body;
+
+  if (!data.name || !data.phone || !data.items || data.items.length === 0) {
+    return res.status(400).json({ error: 'missing_fields' });
+  }
+
+  if (data.mode === 'delivery' && !data.address) {
+    return res.status(400).json({ error: 'missing_address' });
+  }
+
+  var order = {
+    name: data.name,
+    phone: data.phone,
+    mode: data.mode || 'takeaway',
+    items: data.items,
+    total: data.total,
+    address: data.address || '',
+    lang: data.lang || 'fr',
+  };
+
+  try {
+    await Promise.all([
+      whatsapp.notifyRestaurantOrder(order),
+      whatsapp.confirmOrderToClient(order),
+    ]);
+    res.json({ ok: true });
+  } catch (err) {
+    console.error('WhatsApp API error (order):', err);
     res.status(502).json({ error: 'whatsapp_failed' });
   }
 });
